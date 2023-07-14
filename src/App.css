@@ -4,6 +4,7 @@
   border-radius: 5px;
   border-collapse: collapse;
   max-width: fit-content;
+  overflow-x: auto;
 }
 
 .tableContainer table thead tr{
