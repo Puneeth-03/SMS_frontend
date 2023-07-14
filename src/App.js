@@ -283,7 +283,7 @@ const App = () => {
 
   const fetchStudents = () => {
     const temp = document.getElementById('id1').value;
-    axios.get('http://localhost:5000/students', {
+    axios.get('https://sms-backend-api.vercel.app/students', {
       params: {
         page: (temp) ? temp : 1,
         maxrec: 3
@@ -298,7 +298,7 @@ const App = () => {
   };
 
   const addStudent = () => {
-    axios.post('http://localhost:5000/students', { name, email, mobile })
+    axios.post('https://sms-backend-api.vercel.app/students', { name, email, mobile })
       .then((response) => {
         console.log(response.data);
         fetchStudents();
@@ -344,7 +344,7 @@ const App = () => {
       }
   
       axios
-        .put(`http://localhost:5000/students/${id}`, {
+        .put(`https://sms-backend-api.vercel.app/students/${id}`, {
           name: studentToUpdate.name,
           email: studentToUpdate.email,
           mobile: studentToUpdate.mobile,
@@ -396,7 +396,7 @@ const App = () => {
     // eslint-disable-next-line no-restricted-globals
     var result = confirm("Are you sure to delete this row??");
     if (result) {
-      axios.delete(`http://localhost:5000/students/${id}`)
+      axios.delete(`https://sms-backend-api.vercel.app/students/${id}`)
         .then((response) => {
           console.log(response.data);
           fetchStudents();
