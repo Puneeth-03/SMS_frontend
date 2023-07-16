@@ -427,7 +427,7 @@ const App = () => {
 
   return (
     <div className='container'>
-      <h1>Student CRUD Operations</h1>
+      <h1>Student Management System</h1>
       <div className='card'>
         <h2>Add Student</h2>
         <form onSubmit={addStudent}>
